@@ -1,0 +1,156 @@
+$breakpoints: (
+  desktop: '1440px',
+  mobile: '375px'
+);
+$veryDarkMagenta: hsl(300, 43%, 22%);
+$softPink: hsl(333, 80%, 67%);
+$darkGrayishMagenta: hsl(303, 10%, 53%);
+$lightGrayishMagenta: hsl(300, 24%, 96%);
+$white: hsl(0, 0%, 100%);
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Spartan', sans-serif;
+}
+body {
+  font-size: 15px;
+}
+@media (min-width: map-get($breakpoints,desktop)) {
+  .pattern-top {
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+  .pattern-bottom {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+  }
+  .wrapper {
+    width: 100%;
+    min-height: 100vh;
+    background-color: $white;
+    position: relative;
+    padding: 8rem 0;
+ 
+
+  }
+  .container {
+    max-width: 1150px;
+    margin: 0 auto;
+    padding: 2rem 2rem;
+    overflow: hidden;
+  
+  }
+  .top {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    margin-bottom: 6rem;
+    .text {
+      width: 450px;
+      &__heading {
+        color: $veryDarkMagenta;
+        font-size: 3rem;
+        line-height: 1;
+        font-weight: 700;
+      }
+      &__subheading {
+        color: $darkGrayishMagenta;
+        margin-top: 1rem;
+        line-height: 1.6;
+      }
+    }
+    .rating {
+      padding: 1rem;
+      &__card {
+        width: 90%;
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+        padding: 1rem 3rem;
+        background-color: rgba($softPink, 0.1);
+        border-radius: 8px;
+        &:not(:last-child) {
+          margin-bottom: 1rem;
+        }
+        &:nth-child(2) {
+          margin-left: 2rem;
+        }
+        &:nth-child(3) {
+          margin-left: 4rem;
+        }
+      }
+      &__text {
+        font-size: 0.8rem;
+        font-weight: 700;
+        color: $veryDarkMagenta;
+      }
+      &__icons {
+        i.icon-star {
+          content: url(/images/icon-star.svg);
+          width: 15px;
+          height: 15px;
+        }
+      }
+    }
+  }
+  .bottom {
+    min-height: 265px;
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+    }
+    .card {
+      background-color: $veryDarkMagenta;
+      border-radius: 8px;
+      padding: 2rem;
+      
+      &:nth-child(2) {
+        // margin-top: 2rem;
+        transform: translateY(20px);
+      }
+      &:nth-child(3) {
+        // margin-top: 4rem;
+        transform: translateY(40px);
+      }
+      &__profile {
+        display: flex;
+        gap: 1rem;
+      }
+      &__image {
+        img {
+          border-radius: 50%;
+          height: auto;
+          width: 50px;
+        }
+      }
+
+      &__profile-info {
+        h3 {
+          font-size: .8rem;
+          margin-bottom: 6px;
+          color: $white;
+        }
+        p {
+          font-size: .9rem;
+          color: $softPink;
+          font-weight: 400;
+        }
+      }
+      &__comment {
+        margin-top: 1rem;
+        p {
+          
+          color: $lightGrayishMagenta;
+          line-height: 1.7;
+          font-size: .76rem;
+          width:100%;
+        }
+      }
+    }
+
+  }
+}

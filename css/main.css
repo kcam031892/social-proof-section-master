@@ -1,0 +1,139 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Spartan", sans-serif;
+}
+
+body {
+  font-size: 15px;
+}
+
+@media (min-width: 1440px) {
+  .pattern-top {
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+
+  .pattern-bottom {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+  }
+
+  .wrapper {
+    width: 100%;
+    min-height: 100vh;
+    background-color: white;
+    position: relative;
+    padding: 8rem 0;
+  }
+
+  .container {
+    max-width: 1150px;
+    margin: 0 auto;
+    padding: 2rem 2rem;
+    overflow: hidden;
+  }
+
+  .top {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    margin-bottom: 6rem;
+  }
+  .top .text {
+    width: 450px;
+  }
+  .top .text__heading {
+    color: #502050;
+    font-size: 3rem;
+    line-height: 1;
+    font-weight: 700;
+  }
+  .top .text__subheading {
+    color: #937b92;
+    margin-top: 1rem;
+    line-height: 1.6;
+  }
+  .top .rating {
+    padding: 1rem;
+  }
+  .top .rating__card {
+    width: 90%;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    padding: 1rem 3rem;
+    background-color: rgba(238, 104, 164, 0.1);
+    border-radius: 8px;
+  }
+  .top .rating__card:not(:last-child) {
+    margin-bottom: 1rem;
+  }
+  .top .rating__card:nth-child(2) {
+    margin-left: 2rem;
+  }
+  .top .rating__card:nth-child(3) {
+    margin-left: 4rem;
+  }
+  .top .rating__text {
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: #502050;
+  }
+  .top .rating__icons i.icon-star {
+    content: url(/images/icon-star.svg);
+    width: 15px;
+    height: 15px;
+  }
+
+  .bottom {
+    min-height: 265px;
+  }
+  .bottom .grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+  .bottom .card {
+    background-color: #502050;
+    border-radius: 8px;
+    padding: 2rem;
+  }
+  .bottom .card:nth-child(2) {
+    transform: translateY(20px);
+  }
+  .bottom .card:nth-child(3) {
+    transform: translateY(40px);
+  }
+  .bottom .card__profile {
+    display: flex;
+    gap: 1rem;
+  }
+  .bottom .card__image img {
+    border-radius: 50%;
+    height: auto;
+    width: 50px;
+  }
+  .bottom .card__profile-info h3 {
+    font-size: 0.8rem;
+    margin-bottom: 6px;
+    color: white;
+  }
+  .bottom .card__profile-info p {
+    font-size: 0.9rem;
+    color: #ee68a4;
+    font-weight: 400;
+  }
+  .bottom .card__comment {
+    margin-top: 1rem;
+  }
+  .bottom .card__comment p {
+    color: #f7f2f7;
+    line-height: 1.7;
+    font-size: 0.76rem;
+    width: 100%;
+  }
+}/*# sourceMappingURL=main.css.map */
